@@ -4,15 +4,15 @@ A next-word prediction project built using an **LSTM (Long Short-Term Memory)** 
 
 The project uses a FAQ-style text corpus about the **CampusX Data Science Mentorship Program**. The model learns word sequences from the text and predicts the most likely next word given an input sequence.
 
-## 🚀 Live Demo
+##  Live Demo
 
 Try the deployed application:
 
-👉 **[Next Word Prediction using LSTM](https://nextword--lstm.streamlit.app/)**
+ **[Next Word Prediction using LSTM](https://nextword--lstm.streamlit.app/)**
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 This project demonstrates how an LSTM-based language model can be used for **next-word prediction**.
 
@@ -31,7 +31,7 @@ The complete workflow includes:
 
 ---
 
-## 🧠 Model Architecture
+##  Model Architecture
 
 ```text
 Input Sequence
@@ -61,7 +61,7 @@ Predicted Next Word
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```text
 Nextword--LSTM/
@@ -95,7 +95,7 @@ Nextword--LSTM/
 
 ---
 
-## 🔄 How It Works
+##  How It Works
 
 The input text is first passed through the tokenizer. For example:
 
@@ -143,7 +143,8 @@ what
 is
 ```
 
-![Next Word Prediction Example 1](screenshots/prediction_1.png)
+![Next Word Prediction Example 1](<img width="1920" height="1080" alt="Screenshot (857)" src="https://github.com/user-attachments/assets/ed049561-55d0-41ec-b493-c54f2c399606" />
+)
 
 ---
 
@@ -161,7 +162,8 @@ what is the fee
 of
 ```
 
-![Next Word Prediction Example 2](screenshots/prediction_2.png)
+![Next Word Prediction Example 2](<img width="1920" height="1080" alt="Screenshot (858)" src="https://github.com/user-attachments/assets/ae5b8f2d-3379-493c-a1cc-088c89cf04bf" />
+)
 
 ---
 
@@ -179,11 +181,12 @@ what is the fee of the
 mentorship
 ```
 
-![Next Word Prediction Example 3](screenshots/prediction_3.png)
+![Next Word Prediction Example 3](<img width="1920" height="1080" alt="Screenshot (859)" src="https://github.com/user-attachments/assets/b777f26e-89d4-46f5-a524-2af7b508e099" />
+)
 
 ---
 
-## 🌐 Streamlit Application
+##  Streamlit Application
 
 The model has been deployed using **Streamlit**. The application allows users to:
 
@@ -206,7 +209,7 @@ mentorship
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - Python
 - TensorFlow
@@ -217,7 +220,7 @@ mentorship
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 Clone the repository:
 
@@ -252,7 +255,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Run the Streamlit Application
+##  Run the Streamlit Application
 
 ```bash
 streamlit run app.py
@@ -288,7 +291,7 @@ Next Word Prediction
 
 ---
 
-## 💾 Model and Tokenizer
+##  Model and Tokenizer
 
 The trained model is saved as:
 
@@ -306,60 +309,15 @@ Both are required for inference because the model expects the same vocabulary an
 
 ---
 
-## 📊 Learning Objective
-
-This project was created to understand the fundamentals of **sequence modeling and recurrent neural networks**. It provides practical experience with:
-
-- Natural Language Processing
-- Text tokenization
-- Sequence generation
-- Padding
-- Word embeddings
-- LSTM networks
-- Softmax classification
-- Model saving and loading
-- Model deployment
-- Streamlit
-
----
-
-## 🔮 Possible Improvements
-
-The current project uses a relatively small FAQ-style corpus and is intended as a learning project. Possible future improvements include:
-
-- Train on a larger text corpus
-- Increase vocabulary size
-- Use pretrained word embeddings
-- Add temperature-based sampling
-- Generate multiple possible next words
-- Implement top-k sampling
-- Build an autocomplete interface
-- Improve the Streamlit UI
-- Compare LSTM with GRU
-- Compare LSTM with Transformer-based models
-
----
-
-## 📌 Limitations
+##  Limitations
 
 This model is trained on a small domain-specific corpus. Therefore, its predictions are primarily useful for text patterns similar to the training data. It should not be considered a general-purpose language model.
 
 ---
 
-## 📜 License
+##  License
 
 This project does not currently include a license.
 
 If you plan to distribute or modify the project publicly, consider adding an appropriate open-source license.
 
----
-
-## 👨‍💻 Author
-
-**Vivek Kumar**
-
-GitHub: [https://github.com/Vivek-ML001](https://github.com/Vivek-ML001)
-
----
-
-⭐ If you find this project useful, consider giving the repository a star!
