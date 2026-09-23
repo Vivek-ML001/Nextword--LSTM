@@ -1,80 +1,365 @@
 # Nextword--LSTM
 
-A simple next-word prediction project built using an LSTM model in TensorFlow/Keras. The project uses a FAQ-style text corpus about the CampusX Data Science Mentorship Program and demonstrates how to tokenize text, create input sequences, and train an LSTM to predict the next word.
+A next-word prediction project built using an **LSTM (Long Short-Term Memory)** neural network with **TensorFlow/Keras**.
 
-## Project Overview
+The project uses a FAQ-style text corpus about the **CampusX Data Science Mentorship Program**. The model learns word sequences from the text and predicts the most likely next word given an input sequence.
 
-This repository contains a Jupyter notebook that walks through:
+## 🚀 Live Demo
 
-- Preparing text data
-- Tokenizing words using `Tokenizer`
-- Creating sequences for supervised learning
-- Training an LSTM-based language model
-- Predicting the next word from a sequence
+Try the deployed application:
 
-## Repository Contents
+👉 **[Next Word Prediction using LSTM](https://nextword--lstm.streamlit.app/)**
 
-- `Nextword.ipynb` — main notebook with the full implementation and experiments
-- `Data` — FAQ dataset used for training
-- `LSTM` — placeholder/working file for model-related code or extension
+---
 
-## What the Notebook Does
+## 📌 Project Overview
 
-The notebook:
+This project demonstrates how an LSTM-based language model can be used for **next-word prediction**.
 
-1. Defines a text corpus from FAQ-style content.
-2. Fits a `Tokenizer` on the text.
-3. Converts sentences into integer token sequences.
-4. Builds training examples as sliding-window sequences.
-5. Trains an LSTM model to learn word-to-word dependencies.
-6. Demonstrates sequence generation for next-word prediction.
+The complete workflow includes:
 
-## Tech Stack
+1. Preparing the text corpus
+2. Tokenizing the text using Keras `Tokenizer`
+3. Converting words into integer sequences
+4. Creating supervised training sequences
+5. Padding the input sequences
+6. Building an LSTM-based neural network
+7. Training the model
+8. Predicting the next word
+9. Saving the trained model and tokenizer
+10. Deploying the model using Streamlit
+
+---
+
+## 🧠 Model Architecture
+
+```text
+Input Sequence
+      ↓
+Embedding Layer
+      ↓
+LSTM (150 units)
+      ↓
+LSTM (150 units)
+      ↓
+Dense Layer
+      ↓
+Softmax
+      ↓
+Predicted Next Word
+```
+
+### Model Configuration
+
+- **Embedding dimension:** 100
+- **First LSTM:** 150 units
+- **Second LSTM:** 150 units
+- **Input sequence length:** 56
+- **Output vocabulary:** 283 words
+- **Activation function:** Softmax
+- **Framework:** TensorFlow / Keras
+
+---
+
+## 📂 Repository Structure
+
+```text
+Nextword--LSTM/
+│
+├── Data
+├── LSTM
+├── screenshots/
+│   ├── prediction_1.png
+│   ├── prediction_2.png
+│   └── prediction_3.png
+├── Nextword.ipynb
+├── nextword_lstm.keras
+├── tokenizer.pkl
+├── app.py
+├── requirements.txt
+└── README.md
+```
+
+### File Description
+
+| File | Description |
+| --- | --- |
+| `Nextword.ipynb` | Complete notebook containing data preparation, tokenization, training, and prediction |
+| `nextword_lstm.keras` | Trained LSTM model |
+| `tokenizer.pkl` | Saved Keras tokenizer used during training |
+| `app.py` | Streamlit application for next-word prediction |
+| `requirements.txt` | Python dependencies required to run the application |
+| `Data` | Dataset/text corpus used for training |
+| `LSTM` | Model-related working directory |
+| `screenshots/` | Screenshots showing prediction examples |
+
+---
+
+## 🔄 How It Works
+
+The input text is first passed through the tokenizer. For example:
+
+```text
+what is the fee
+```
+
+The tokenizer converts the words into integer IDs, which are padded and passed to the trained model:
+
+```text
+Text
+ ↓
+Tokenizer
+ ↓
+Integer Sequence
+ ↓
+Padding
+ ↓
+LSTM Model
+ ↓
+Probability Distribution
+ ↓
+Predicted Word
+```
+
+The model then selects the word with the highest predicted probability.
+
+---
+
+## 💻 Example Predictions
+
+The trained model is deployed as a Streamlit application.
+
+### Example 1
+
+**Input:**
+
+```text
+what
+```
+
+**Predicted next word:**
+
+```text
+is
+```
+
+![Next Word Prediction Example 1](screenshots/prediction_1.png)
+
+---
+
+### Example 2
+
+**Input:**
+
+```text
+what is the fee
+```
+
+**Predicted next word:**
+
+```text
+of
+```
+
+![Next Word Prediction Example 2](screenshots/prediction_2.png)
+
+---
+
+### Example 3
+
+**Input:**
+
+```text
+what is the fee of the
+```
+
+**Predicted next word:**
+
+```text
+mentorship
+```
+
+![Next Word Prediction Example 3](screenshots/prediction_3.png)
+
+---
+
+## 🌐 Streamlit Application
+
+The model has been deployed using **Streamlit**. The application allows users to:
+
+- Enter a text sequence
+- Tokenize the input
+- Convert it into the required sequence format
+- Pad the sequence
+- Pass it through the trained LSTM model
+- Display the predicted next word
+
+### Example
+
+```text
+Input:
+what is the fee of the
+
+Output:
+mentorship
+```
+
+---
+
+## 🛠️ Technologies Used
 
 - Python
-- TensorFlow / Keras
-- Jupyter Notebook
+- TensorFlow
+- Keras
 - NumPy
+- Streamlit
+- Jupyter Notebook
 
-## Setup
+---
 
-Create a virtual environment and install the required packages:
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Vivek-ML001/Nextword--LSTM.git
+cd Nextword--LSTM
+```
+
+Create and activate a virtual environment:
 
 ```bash
 python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-pip install tensorflow jupyter notebook numpy
 ```
 
-## Run
+On macOS/Linux:
 
-Open the notebook in Jupyter:
+```bash
+source venv/bin/activate
+```
+
+On Windows:
+
+```bash
+venv\\Scripts\\activate
+```
+
+Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Run the Streamlit Application
+
+```bash
+streamlit run app.py
+```
+
+The application will open in your browser.
+
+---
+
+## 📓 Run the Notebook
+
+To run the training notebook:
 
 ```bash
 jupyter notebook Nextword.ipynb
 ```
 
-Then run all cells to:
+The notebook contains the complete process for:
 
-- load the dataset
-- tokenize the text
-- build sequences
-- train the LSTM model
-- inspect generated next-word predictions
+```text
+Text Corpus
+    ↓
+Tokenization
+    ↓
+Sequence Generation
+    ↓
+Padding
+    ↓
+LSTM Training
+    ↓
+Next Word Prediction
+```
 
-## Example Use Case
+---
 
-This project is a beginner-friendly example of NLP sequence modeling and can be extended for:
+## 💾 Model and Tokenizer
 
-- text generation
-- chatbot response suggestions
-- autocomplete systems
-- next-token prediction for small corpora
+The trained model is saved as:
 
-## Notes
+```text
+nextword_lstm.keras
+```
 
-This is a learning project and intentionally uses a small dataset for educational purposes. It is a good starting point for understanding how recurrent neural networks can model language patterns.
+The tokenizer used during training is saved as:
 
-## License
+```text
+tokenizer.pkl
+```
 
-This project does not currently include a license file. If you plan to share or distribute it publicly, consider adding an appropriate open-source license.
+Both are required for inference because the model expects the same vocabulary and token mapping used during training.
+
+---
+
+## 📊 Learning Objective
+
+This project was created to understand the fundamentals of **sequence modeling and recurrent neural networks**. It provides practical experience with:
+
+- Natural Language Processing
+- Text tokenization
+- Sequence generation
+- Padding
+- Word embeddings
+- LSTM networks
+- Softmax classification
+- Model saving and loading
+- Model deployment
+- Streamlit
+
+---
+
+## 🔮 Possible Improvements
+
+The current project uses a relatively small FAQ-style corpus and is intended as a learning project. Possible future improvements include:
+
+- Train on a larger text corpus
+- Increase vocabulary size
+- Use pretrained word embeddings
+- Add temperature-based sampling
+- Generate multiple possible next words
+- Implement top-k sampling
+- Build an autocomplete interface
+- Improve the Streamlit UI
+- Compare LSTM with GRU
+- Compare LSTM with Transformer-based models
+
+---
+
+## 📌 Limitations
+
+This model is trained on a small domain-specific corpus. Therefore, its predictions are primarily useful for text patterns similar to the training data. It should not be considered a general-purpose language model.
+
+---
+
+## 📜 License
+
+This project does not currently include a license.
+
+If you plan to distribute or modify the project publicly, consider adding an appropriate open-source license.
+
+---
+
+## 👨‍💻 Author
+
+**Vivek Kumar**
+
+GitHub: [https://github.com/Vivek-ML001](https://github.com/Vivek-ML001)
+
+---
+
+⭐ If you find this project useful, consider giving the repository a star!
