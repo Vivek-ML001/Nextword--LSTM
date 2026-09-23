@@ -6,7 +6,7 @@ The project uses a FAQ-style text corpus about the **CampusX Data Science Mentor
 
 ##  Live Demo
 
-Try the deployed application:
+Live:
 
  **[Next Word Prediction using LSTM](https://nextword--lstm.streamlit.app/)**
 
@@ -143,9 +143,6 @@ what
 is
 ```
 
-![Next Word Prediction Example 1](<img width="1920" height="1080" alt="Screenshot (857)" src="https://github.com/user-attachments/assets/ed049561-55d0-41ec-b493-c54f2c399606" />
-)
-
 ---
 
 ### Example 2
@@ -162,9 +159,6 @@ what is the fee
 of
 ```
 
-![Next Word Prediction Example 2](<img width="1920" height="1080" alt="Screenshot (858)" src="https://github.com/user-attachments/assets/ae5b8f2d-3379-493c-a1cc-088c89cf04bf" />
-)
-
 ---
 
 ### Example 3
@@ -180,9 +174,6 @@ what is the fee of the
 ```text
 mentorship
 ```
-
-![Next Word Prediction Example 3](<img width="1920" height="1080" alt="Screenshot (859)" src="https://github.com/user-attachments/assets/b777f26e-89d4-46f5-a524-2af7b508e099" />
-)
 
 ---
 
