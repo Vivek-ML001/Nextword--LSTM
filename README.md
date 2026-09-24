@@ -125,7 +125,7 @@ The model then selects the word with the highest predicted probability.
 
 ---
 
-## 💻 Example Predictions
+##  Example Predictions
 
 The trained model is deployed as a Streamlit application.
 
@@ -256,7 +256,7 @@ The application will open in your browser.
 
 ---
 
-## 📓 Run the Notebook
+##  Run the Notebook
 
 To run the training notebook:
 
