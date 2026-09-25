@@ -10,6 +10,14 @@ Live:
 
  **[Next Word Prediction using LSTM](https://nextword--lstm.streamlit.app/)**
 
+
+## Run with Docker
+   docker pull vivek2477/nextword-lstm:latest
+   
+   docker run -p 8501:8501 vivek2477/nextword-lstm:latest
+   
+   Open http://localhost:8501
+
 ---
 
 ##  Project Overview
